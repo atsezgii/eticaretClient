@@ -40,7 +40,12 @@ create(name:HTMLInputElement,stock:HTMLInputElement,price:HTMLInputElement) {
       dismissOthers: true,
       messageType : MessageType.Success,
       position: Position.TopRight
-    })
-})
+    });
+},errorMessage=>{ this.alertify.message(errorMessage,{
+  dismissOthers: true,
+  messageType:MessageType.Error,
+  position:Position.TopRight
+});
+});
 }
 }
